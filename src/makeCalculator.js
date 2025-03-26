@@ -20,13 +20,9 @@ function makeCalculator() {
       this.result *= value;
     },
 
-    /* divide(value) {
-      if (value !== 0) {
-        this.result /= value;
-      } else {
-        console.error(error);
-      }
-    }, */
+    divide(value) {
+      this.result /= value;
+    },
 
     reset() {
       this.result = 0;
@@ -35,7 +31,7 @@ function makeCalculator() {
     },
 
     operate(operation, value) {
-      operation.call(this, value);
+      operation(value);
 
       return this;
     },
